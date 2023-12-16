@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>W10 Assignment</title>
+   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+   <script src="index.js"></script>
+</head>
+<!-- page has two containers: one for introduction and card..., next for the table information -->
+<body> 
+   <div class="container">
+      <div class="row">
+         <div class="col-sm">
+            <p class="bg-info my-3 rounded p-3">Hello! Thanks for checking out our blog! Please add what books you'd like to see discussed in future book clubs below. </p>
+         </div>
+      </div>
+      <div class="row">
+         <div class="card">
+         <div class="card-body">
+            <div class="col-sm">
+               <div class="form-group">
+                  <label for="new-club-date"> Next Book Club Date</label>
+                  <input type="date" class="form-control" id="new-club-date">
+                  <!-- id "new-club-date" used in js-->
+               </div>
+            <!-- first part of the form asking for next book club date the user wants to review the suggested book -->
+            </div>
+            <div class="col-sm">
+               <div class="form-group">
+                  <label for="new-book">Book Title and Author</label>
+                  <input type="text" class="form-control mb-2" id="new-book" placeholder="Title and author...">
+                  <!-- id "new-book" used in js-->
+               </div>
+            </div>
+            <!-- second part of the form asks for what book is suggested -->
+            <div class="col-sm">
+               <div class="form-group">
+                  <label for="new-user">User Gmail</label>
+                  <input type="text" class="form-control mb-2" id="new-user" placeholder="Gmail...">
+                  <!-- id "new-user" used in js-->
+               </div>
+            </div>
+            <!-- third part of the form asks for user gmail for contact info -->
+            <button id= "add" class="btn btn-info form-control">Submit</button>
+            <!-- submit button with id "add" to be referred to in JS -->
+         </div>
+         </div>
+      </div>
+   </div>
+   <div class="container mt-3">
+      <table id="suggestionsList" class="table table-dark table-striped">
+         <tr>
+            <th>Next Book Club Date</th>
+            <th>Book Title and Author</th>
+            <th>User Gmail</th>
+         </tr>
+      </table>
+   </div>
+
+   <!-- used after the body so it runs through everything instead of just one part of the HTML that loaded -->
+   <script src="index.js"></script>
+   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
